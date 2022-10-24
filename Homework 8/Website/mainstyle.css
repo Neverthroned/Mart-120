@@ -1,0 +1,26 @@
+/* STYLESHEET */
+li{
+	color:white;
+	font-size: 15px;
+}
+
+h1{
+	color: white;
+	font-size: 30px;
+	font-weight: 600;
+}
+/* (A) FLEX CONTAINER 1 */
+.wrap-flex {display: flex}
+.wrap-flex > * {
+  width: 33%;
+}
+/* (A) FLEX CONTAINER 2 */
+.wrap-flex2 {display: flex}
+.wrap-flex2 > * {
+  width: 50%;
+}
+body{ 
+	background-color: #476b6b;
+	background-image: url(backgroundimage.png);
+	background-repeat: no-repeat;
+}

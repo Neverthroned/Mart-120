@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>contactpage</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<link rel="stylesheet" type="text/css" href="mainstyle.css">
+		<script>
+		 function getInfo()
+		{
+			var firstName = document.getElementById("fName").value;
+			if(firstName == "")
+			{
+			document.getElementById("fName").style.backgroundColor = "red";
+			document.getElementById("fName").focus();
+			}
+			var lastName = document.getElementById("lName").value;
+			if(lastName == "")
+			{
+			document.getElementById("lName").style.backgroundColor = "red";
+			document.getElementById("lName").focus();
+			}
+			var email = document.getElementById("email").value;
+			if(email == "")
+			{
+			document.getElementById("email").style.backgroundColor = "red";
+			document.getElementById("email").focus();
+			}
+			document.getElementById("info").innerHTML = "Name: " + firstName + " " + lastName + " Email: " + email;
+		}
+
+		function agree() 
+		{
+			document.getElementById("submit").disabled = true;
+			if (document.getElementById("agree").checked) 
+			{
+			document.getElementById("submit").disabled = false;
+			} 		
+			else 
+			{
+			document.getElementById("submit").disabled = true;
+			}
+		}
+		</script>
+		<style>
+		body {
+		background-image: url();
+		}
+		</style
+	</head>
+	
+<body background-color: #476b6b">
+	
+	<h1 style="color: white"><center>Contact Info</center></h1>
+	<table>
+		<tr>
+			<td>First Name:</td>
+			<td><input type="text" id="fName"></td>
+		</tr>
+		<tr>
+			<td>Last Name:</td>
+			<td><input type="text" id="lName"></td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td><input type="text" id="email"></td>
+		</tr>
+			<td><input type="checkbox" name="checkbox" value="check" id="agree" onclick="agree()" required/> Do You Agree</td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" id="submit" onClick="getInfo();" disabled></td>
+		</tr>
+	</table>
+	
+	<div id="info"></div>
+	
+	<script src="index.js"></script>
+	<div class="wrap-flex2">
+		<h2><a href="index.html" style="color:white">Home</a></br>
+		<h2><a href="aboutpage.html" style="color:white">About Me</a></br>
+		</h2>
+	</div>
+</body>
+
+</html>

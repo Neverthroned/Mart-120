@@ -16,18 +16,21 @@
 			{
 			document.getElementById("fName").style.backgroundColor = "red";
 			document.getElementById("fName").focus();
+			window.alert("You Have Not Entered Your First Name");
 			}
 			var lastName = document.getElementById("lName").value;
 			if(lastName == "")
 			{
 			document.getElementById("lName").style.backgroundColor = "red";
 			document.getElementById("lName").focus();
+			window.alert("You Have Not Entered Your Last Name");
 			}
 			var email = document.getElementById("email").value;
 			if(email == "")
 			{
 			document.getElementById("email").style.backgroundColor = "red";
 			document.getElementById("email").focus();
+			window.alert("You Have Not Entered Your Email");
 			}
 			document.getElementById("info").innerHTML = "Name: " + firstName + " " + lastName + " Email: " + email;
 		}
